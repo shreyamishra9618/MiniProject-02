@@ -5,8 +5,12 @@
 
 body {
     display: flex;
-     flex-direction: column; 
-    line-height: 1;
+    flex-direction: column; 
+    /* line-height: 1; */
+    background:linear-gradient(120deg,
+                     rgb(20, 192, 255) 10%, 
+                     rgb(8, 149, 97) 50%, 
+                     rgb(87, 239, 219) 10%)
   }
   
   header {
@@ -20,9 +24,9 @@ body {
     color: var(--secondary);
   }
   main {
-    display: flex;
-    max-width: 96%;
-    margin: 10px 5px;
+    display: flex; 
+    max-width: 100%;
+    margin: 2px 30px;
     justify-content: space-around; 
   }
   
@@ -32,20 +36,22 @@ body {
   }
   
   h2 {
-    margin: 2% 0;
-    font-size: 250%;
+    margin: 1% 0;
+    font-size: 200%;
   }
   
 
   .card {
-     display:inline-block;  
-     justify-content: space-evenly;
-    flex-direction: column; 
-    flex-wrap: wrap;
+    display:inline-block;  
+    /* justify-content: space-between; */
+     flex-direction: column;   
+     flex-wrap: wrap;  
     border-style: double;
-    border-width: 2px;
-    padding: 1px 60px 100px 60px;
-    margin: 20px 60px;;
+    border-width: 4px;
+    /* padding: 1px 0px; */
+    transition: all 1s ease-in;
+    /* margin: 20px 60px;; */
+    margin: auto;
     border-radius: 40px;
     box-shadow: 5px 6px 3px #13293d;
     background-image: linear-gradient( purple, skyblue);
@@ -55,12 +61,18 @@ body {
     color: rgba(255, 255, 255, 1);
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
   }
+  .card header:hover {
+    color: rgb(99, 219, 39);
+    box-shadow: 0 5px 15px rgba(2, 16, 20, 0.4);
+  }
   .card header {
-    padding: 10px;
+    padding: 5px;
+    position: relative;
+    bottom: 9px;
     text-align: center;
     border-radius: 10px;
     border-style: dashed;
-    background-image: linear-gradient( salmon, blue);
+    background-image: linear-gradient( salmon, blue); 
   }
   
   .card p {
@@ -69,7 +81,7 @@ body {
   footer {
     display: flex;
     justify-content: center;
-    padding: 2%;
+    padding: 1%;
     background-color: var(--primary);
     color: var(--secondary)
   }
